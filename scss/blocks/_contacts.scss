@@ -1,0 +1,159 @@
+.contacts {
+    background-color: $bg-color;
+    position: relative;
+}
+
+.contacts__bgtext {
+    background-image: linear-gradient(to right, rgba(#595959, 0.3), rgba(#595959, 0));
+    -webkit-background-image: linear-gradient(to right, rgba(#595959, 0.3), rgba(#595959, 0)); 
+
+    &:first-child {
+        top: 100px;
+        left: 0;
+    }
+
+    &:nth-child(2) {
+        top: 400px;
+        left: 600px;
+    }
+}
+
+.contacts__text {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+
+    padding-top: 100px;
+
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+}
+
+.contacts__container {
+    padding-top: 50px;
+
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+
+    text-align: center;
+}
+
+.contacts__block {
+    width: 100%;
+    max-width: 400px;
+}
+
+.contacts__item {
+    margin-top: 35px;
+    font-size: 1.6rem;
+}
+
+.contacts__link {
+    margin-top: 10px;
+    text-transform: lowercase;
+
+    font-weight: 500;
+    text-decoration: underline;
+
+    &:hover {
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    &:active {
+        font-weight: 700;
+        text-decoration: none;
+    }
+}
+
+.icon__box {
+    margin-top: 50px;
+}
+
+svg {
+    fill: #fff;
+}
+
+
+.feedback__block {
+    width: 100%;
+    max-width: 400px;
+}
+
+.input {
+    width: 100%;
+    max-width: 400px;
+    height: 70px;
+    margin-top: 30px;
+    padding: 15px;
+
+    display: block;
+
+    background-color: transparent;
+    border: 2px solid #fff;
+
+    font-family: inherit;
+    font-size: 1.3rem;
+    color: #000;
+    font-weight: 500;
+
+    &::placeholder {
+        font-size: 1.3rem;
+        text-transform: lowercase;
+        color: rgba(#fff, 0.6);
+    }
+
+    &:hover {
+        background-color: rgba(#fff, 0.1);
+    }
+
+    &:focus {
+        outline: none;
+        background-color: rgba(#fff, 0.3);
+    }
+}
+
+.form__button { 
+    margin: 30px auto 10px;   
+    border: none;
+
+    font-family: inherit;
+    color:#fff;
+    text-transform: uppercase;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.form__text {
+    width: 100%;
+    max-width: 300px;
+
+    margin: 0 auto;
+    font-size: 0.8rem;
+}
+
+.policy {
+    text-transform: lowercase;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.map {
+    width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+}

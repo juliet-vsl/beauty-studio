@@ -1,0 +1,151 @@
+@import 'fonts';
+
+$font: 'Montserrat', sans-serif;
+$font-bgtext: 'Rubik One', sans-serif;
+
+$bg-color: #404040;
+$bgtext-color: linear-gradient(to right, rgba(#5b5b5b, 1), rgba(#595959, 0.2));
+$element-color: #680000;
+$text-color: #fff;
+
+html {
+    height: 100%;
+    font-size: 15px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    color: $text-color;
+    font-family: $font;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: $text-color;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    display: block;
+}
+
+.page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    background-color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+@import 'blocks/header';
+
+.title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 25px;
+    text-transform: uppercase;
+    line-height: 150%;
+}
+
+.text {
+    font-size: 1.6rem;
+    text-transform: lowercase;
+    line-height: 150%;
+    font-weight: 300;
+}
+
+.button {
+    width: 249px;
+    height: 53px;
+    padding: 15px;
+
+    display: block;
+
+    background-color: $element-color;
+
+    font-size: 1.2rem;
+    text-align: center;
+
+    transition: 0.3s;
+    
+    &:hover {
+        width: 255px;
+        height: 55px;
+        font-size: 1.3rem;
+        background-color: darken($color: $element-color, $amount: 10);
+    }
+
+    &:active {
+        width: 255px;
+        height: 55px;
+        font-size: 1.3rem;
+        background-color: darken($color: $element-color, $amount: 15);
+    }
+}
+
+.bgtext {
+    font-family: $font-bgtext;
+    font-size: 12rem;
+    text-transform: uppercase;
+
+    color: transparent;
+    background-clip: text;
+    background-image: $bgtext-color;
+    -webkit-background-clip: text;
+    -webkit-background-image: $bgtext-color; 
+
+    position: absolute;
+    z-index: 1;
+}
+
+.bgtext-contour {
+    font-family: $font-bgtext;
+    font-size: 12rem;
+
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(190, 190, 190, 0.6);
+
+    background-image: none;
+    -webkit-background-image: none;
+
+    & span:first-child {
+        -webkit-text-stroke-color: rgba(190, 190, 190, 0.4);
+    }
+
+    & span:last-child {
+        -webkit-text-stroke-color: rgba(190, 190, 190, 0.2);
+    }
+}
+
+@import 'blocks/about';
+
+@import 'blocks/rules';
+
+@import 'blocks/price';
+
+@import 'blocks/contacts';
+
+@import 'blocks/footer';

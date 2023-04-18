@@ -1,0 +1,23 @@
+.footer {
+    height: 70px;
+    background: $bg-color;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copy {
+
+    &:after {
+        content: '';
+        width: 1px;
+        height: 10px;
+        background-color: #fff;
+    }
+}
+
+.powered {
+    margin-left: 15px;
+}
+

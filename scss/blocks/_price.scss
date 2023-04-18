@@ -1,0 +1,59 @@
+.price {
+    background: linear-gradient(to left, rgba($bg-color, 0.7), rgba($bg-color, 1));
+}
+
+.price__item {
+    height: 300px;
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+.price__price {
+    font-family: $font-bgtext;
+    font-size: 3.3rem;
+
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: $element-color;
+
+    &-reverse {
+        text-align: right;
+    }
+}
+
+.price__description {
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+
+    background: linear-gradient(to left, rgba($bg-color, 0), rgba($bg-color, 1));
+
+    &-reverse {
+        background: linear-gradient(to right, rgba($bg-color, 0), rgba($bg-color, 1));
+
+        text-align: right;
+        align-items: end;
+    }
+}
+
+.price__title {
+    font-size: 1.6rem;
+}
+
+.price__text {
+    font-size: 1.3rem;
+}
+
