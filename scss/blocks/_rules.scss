@@ -1,5 +1,5 @@
 .rules {
-    background-color: rgba($bg-color, 0.7);
+    background: rgba($bg-color, 0.7);
 
     position: relative;
 }
@@ -7,20 +7,19 @@
 .rules__bgtext {
     background-image: linear-gradient(to right, rgba(#fff, 0.1), rgba(#595959, 0.25));
     -webkit-background-image: linear-gradient(to right, rgba(#fff, 0.1), rgba(#595959, 0.25)); 
+}
 
-    &:first-child {
-        top: 30px;
-        left: 0;
+.rules__string {
+    &-1 {
+        top: 50px;
     }
 
-    &:nth-child(2) {
-        top: 220px;
-        left: 400px;
+    &-2 {
+        top: 230px;
     }
 
-    &:nth-child(3) {
-        top: 405px;
-        left: 800px;
+    &-3 {
+        top: 400px;
     }
 }
 
@@ -28,14 +27,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .rules__item {
     width: 300px;
-    height: 450px;
+    min-height: 450px;
 
     border: 2px solid $element-color;
     background: radial-gradient(rgba($bg-color, 0.8), rgba($bg-color, 0));
@@ -58,4 +58,31 @@
 .rules__text {
     font-size: 1.2rem;
     padding: 40px 10px;
+}
+
+@media (max-width: 1191px) {
+    .rules__container {
+        justify-content: center;
+    }
+
+    .rules__item {
+        margin: 15px;
+    }
+}
+
+@media (max-width: 760px) {
+
+    .rules__string {
+        &-1 {
+            top: 150px;
+        }
+    
+        &-2 {
+            top: 630px;
+        }
+    
+        &-3 {
+            top: 1110px;
+        }
+    }
 }

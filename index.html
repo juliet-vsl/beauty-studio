@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,23 +13,25 @@
         <header class="header">
             <nav class="menu menu__desktop">
                 <ul class="nav">
-                    <li class="nav__item"><a href="" class="nav__link">Главная</a></li>
-                    <li class="nav__item"><a href="" class="nav__link">О нас</a></li>
-                    <li class="nav__item"><a href="" class="nav__link">Об аренде</a></li>
-                    <li class="nav__item"><a href="" class="nav__link">Цены</a></li>
-                    <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
+                    <li class="nav__item"><a href="#home" class="nav__link">Главная</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">О нас</a></li>
+                    <li class="nav__item"><a href="#rules" class="nav__link">Об аренде</a></li>
+                    <li class="nav__item"><a href="#prices" class="nav__link">Цены</a></li>
+                    <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
                 </ul>
             </nav>
             <nav class="menu menu__mobile">
+                <a href="index.html"><img class="logo" src="img/logo2.svg" alt=""></a>
+                <div class="menu__burger"><span>toggle</span></div>
                 <ul class="nav nav-mobile">
-                    <li class="nav__item nav__item-mobile"><a href="" class="nav__link">Главная</a></li>
-                    <li class="nav__item nav__item-mobile"><a href="" class="nav__link">О нас</a></li>
-                    <li class="nav__item nav__item-mobile"><a href="" class="nav__link">Об аренде</a></li>
-                    <li class="nav__item nav__item-mobile"><a href="" class="nav__link">Цены</a></li>
-                    <li class="nav__item nav__item-mobile"><a href="" class="nav__link">Контакты</a></li>
+                    <li class="nav__item nav__item-mobile"><a href="#home" class="nav__link">Главная</a></li>
+                    <li class="nav__item nav__item-mobile"><a href="#about" class="nav__link">О нас</a></li>
+                    <li class="nav__item nav__item-mobile"><a href="#rules" class="nav__link">Об аренде</a></li>
+                    <li class="nav__item nav__item-mobile"><a href="#prices" class="nav__link">Цены</a></li>
+                    <li class="nav__item nav__item-mobile"><a href="#contacts" class="nav__link">Контакты</a></li>
                 </ul>
             </nav>
-            <div class="header__container">
+            <div class="header__container" id="home">
                 <div class="header__block">
                     <div class="bgtext header__bgtext">RUKAMI</div>
                     <div class="bgtext bgtext-contour header__bgtext-contour">RU<span>KA</span><span>MI</span></div>
@@ -41,14 +44,14 @@
             </div>
         </header>
         <main class="main">
-            <div class="about">
+            <div class="about" id="about">
                 <div class="container about__container">
                     <div class="about__item">
                         <div class="text about__text">Наш коворкинг расположен в жилом комплексе представительского класса “Парадный Квартал”, который находится в пешей доступности от метро Чернышевская и Площадь Восстания.</div>
                         <div class="about__number">01</div>
                     </div>
                     <div class="about__item">
-                        <div class="about__number">02</div>
+                        <div class="about__number about__number-reverse">02</div>
                         <div class="text about__text about__text-reverse">Стильный дизайнерский интерьер позволяет использовать каждый уголок в качество фотозоны, а профессиональный свет отлично в этом помогает.</div>
                     </div>
                     <div class="about__item">
@@ -58,12 +61,24 @@
                 </div>
             </div>
 
-            <div class="slider"></div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide swiper-slide-1"></div>
+                  <div class="swiper-slide swiper-slide-2"></div>
+                  <div class="swiper-slide swiper-slide-3"></div>
+                  <div class="swiper-slide swiper-slide-4"></div>
+                </div>
+                
+                <div class="swiper-pagination"></div>
+               
+                <div class="swiper-button"><img class="arrow" src="img/arrow.svg" alt=""></div>
+              
+              </div>
 
-            <div class="rules">
-                <div class="bgtext rules__bgtext">rukami</div>
-                <div class="bgtext rules__bgtext">rukami</div>
-                <div class="bgtext rules__bgtext">rukami</div>
+            <div class="rules" id="rules">
+                <marquee class="rules__string-1" direction="right" behavior="scroll"><div class="bgtext rules__bgtext rules__bgtext-1">rukami</div></marquee>
+                <marquee class="rules__string-2" direction="left" behavior="scroll"><div class="bgtext rules__bgtext rules__bgtext-2">rukami</div></marquee>
+                <marquee class="rules__string-3" direction="right" behavior="scroll"><div class="bgtext rules__bgtext rules__bgtext-3">rukami</div></marquee>
                 <div class="container rules__container">
                     <div class="rules__item">
                         <div class="title rules__title">материалы</div>
@@ -83,7 +98,7 @@
                 </div>
             </div>
 
-            <div class="price">
+            <div class="price" id="price">
                 <div class="container price__container">
                     <div class="price__item">
                         <div class="price__price">
@@ -91,15 +106,19 @@
                             <div class="price__number">2000 р/день</div>
                         </div>
                         <div class="price__description price__description-reverse">
-                            <div class="title price__title">Аренда места парикмахера</div>
-                            <div class="text price__text">Каждое рабочее место оборудовано комфортным креслом и маневренной тележкой - для мастера. Столиком и подставкой для сумки - для клиента.</div>
+                            <div class="price__info price__info-reverse">
+                                <div class="title price__title">Аренда места парикмахера</div>
+                                <div class="text price__text">Каждое рабочее место оборудовано комфортным креслом и маневренной тележкой - для мастера. Столиком и подставкой для сумки - для клиента.</div>
+                            </div>
                             <a class="button price__button" href="">забронировать</a>
                         </div>
                     </div>
                     <div class="price__item">
                         <div class="price__description">
-                            <div class="title price__title">Аренда кабинета барбера</div>
-                            <div class="text price__text">Кабинет барбера оборудован специальным креслом с подставкой для ног и подголовником, маневренной тележкой и столиком.</div>
+                            <div class="price__info">
+                                <div class="title price__title">Аренда кабинета барбера</div>
+                                <div class="text price__text">Кабинет барбера оборудован специальным креслом с подставкой для ног и подголовником, маневренной тележкой и столиком.</div>
+                            </div>
                             <a class="button price__button" href="">забронировать</a>
                         </div>
                         <div class="price__price price__price-reverse">
@@ -112,18 +131,21 @@
                             <div class="price__number">от 10 000 р</div>
                         </div>
                         <div class="price__description price__description-reverse">
-                            <div class="title price__title">Аренда парикмахерского зала</div>
-                            <div class="text price__text">Мы предоставляем возможность аренды одного
-                                из наших залов или всего пространства коворкинга для проведения мастер-классов и презентаций.</div>
+                            <div class="price__info price__info-reverse">
+                                <div class="title price__title">Аренда парикмахерского зала</div>
+                                <div class="text price__text">Мы предоставляем возможность аренды одного
+                                    из наших залов или всего пространства коворкинга для проведения мастер-классов и презентаций.</div>
+                            </div>
                             <a class="button price__button" href="">забронировать</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="contacts">
-                <div class="bgtext contacts__bgtext">rukami</div>
-                <div class="bgtext contacts__bgtext">rukami</div>
+            <div class="contacts" id="contacts">
+                <marquee class="contacts__string-1" direction="right" behavior="scroll"><div class="bgtext contacts__bgtext contacts__bgtext-1">rukami</div></marquee>
+                <marquee class="contacts__string-2" direction="left" behavior="scroll"><div class="bgtext contacts__bgtext contacts__bgtext-2">rukami</div></marquee>
+                <marquee class="contacts__string-3" direction="right" behavior="scroll" ><div class="bgtext contacts__bgtext contacts__bgtext-3">rukami</div></marquee>
                 <div class="text contacts__text">вы можете связаться с нами по телефону, в соц.сетях, либо оставьте свои контактные данные и мы свяжемся с вами в ближайшее время</div>
                 <div class="container contacts__container">
                     <div class="contacts__block">
@@ -166,5 +188,8 @@
             <div class="powered">Powered by</div>
         </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

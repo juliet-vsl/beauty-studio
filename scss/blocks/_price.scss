@@ -1,9 +1,24 @@
 .price {
-    background: linear-gradient(to left, rgba($bg-color, 0.7), rgba($bg-color, 1));
+    background: linear-gradient(to right, rgba($bg-color, 0.9), rgba($bg-color, 0.7), rgba($bg-color, 0.9));
+    background-size: 400% 400%;
+
+    animation: gradient 20s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .price__item {
-    height: 300px;
+    min-height: 300px;
     margin-top: 50px;
 
     display: flex;
@@ -16,6 +31,7 @@
 }
 
 .price__price {
+    min-width: 360px;
     font-family: $font-bgtext;
     font-size: 3.3rem;
 
@@ -51,9 +67,100 @@
 
 .price__title {
     font-size: 1.6rem;
+    margin-bottom: 20px;
 }
 
 .price__text {
     font-size: 1.3rem;
+    margin-bottom: 20px;
 }
+
+@media (max-width: 901px) {
+    .price__item {
+        margin-top: 50px;
+        flex-direction: column;
+    }
+
+    .price__price {
+        margin-bottom: 20px;
+        text-align: center;
+
+        order: 1;
+    }
+
+    .price__description {
+        max-width: 800px;
+        padding: 0;
+        background: none;
+
+        align-items: center;
+        text-align: center;
+
+        order: 2;
+    
+        &-reverse {
+            background: none;
+        }
+    }
+
+    .price__info {
+        min-height: 180px;
+        padding: 20px;
+        margin-bottom: 30px;
+        
+        background: linear-gradient(to left, rgba($bg-color, 0), rgba($bg-color, 1));
+
+        &-reverse {
+            background: linear-gradient(to right, rgba($bg-color, 0), rgba($bg-color, 1));
+        }
+    }
+
+    .price__text {
+        margin-bottom: 0;
+    }
+
+    .price__button {
+        order: 3;
+    }
+}
+
+@media (max-width: 451px) {
+    .price__price {
+        font-size: 3rem;
+    }
+
+    .price__text {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 376px) {
+    .price__price {
+        font-size: 2.6rem;
+    }
+
+    .button {
+        width: 200px;
+        height: 50px;
+    
+        font-size: 1.1rem;
+        text-align: center;
+    
+        transition: 0.3s;
+        
+        &:hover {
+            width: 205px;
+            height: 53px;
+            font-size: 1.2rem;
+        }
+    
+        &:active {
+            width: 205px;
+            height: 53px;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+
 

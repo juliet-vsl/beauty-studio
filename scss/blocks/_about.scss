@@ -1,5 +1,20 @@
 .about {
-    background: linear-gradient(to right, rgba($bg-color, 0.7), rgba($bg-color, 1));
+    background: linear-gradient(to right, rgba($bg-color, 0.7), rgba($bg-color, 0.9), rgba($bg-color, 0.7));
+    background-size: 400% 400%;
+
+    animation: gradient 20s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .about__item {
@@ -16,7 +31,7 @@
 
 .about__number {
     font-family: $font-bgtext;
-    font-size: 150px;
+    font-size: 10rem;
 
     color: transparent;
     -webkit-text-stroke-width: 2px;
@@ -40,5 +55,48 @@
 
         text-align: right;
     }
-    
+}
+
+@media (max-width: 861px) {
+    .about__text {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 769px) {
+    .about__text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 667px) {
+    .about__item {
+        flex-direction: column;
+    }
+
+    .about__number {
+        order: 1;
+        margin-left: auto;
+        font-size: 7rem;
+
+        &-reverse {
+            margin-left: 0;
+            margin-right: auto;
+        }
+    }
+
+    .about__text {
+        height: 100%;
+        min-height: 150px;
+        margin-top: -10px;
+        order: 2;
+
+        text-align: center;
+    }
+}
+
+@media (max-width: 451px) {
+    .about__text {
+        padding: 20px;
+    }
 }
